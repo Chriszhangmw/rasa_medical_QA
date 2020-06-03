@@ -144,304 +144,63 @@
    
 ## form_story_1
 * request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - slot{"requested_slot": "symptom"}
-    - utter_ask_symptom
-* form: inform{"symptom": "肺外症状"}
-    - form: diagnosis_form
-    - slot{"symptom": "肺外症状"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "司帕沙星片"}
-    - form: diagnosis_form
-    - slot{"drug": "司帕沙星片"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "大叶性肺炎"}
-    - form: diagnosis_form
-    - slot{"disease": "大叶性肺炎"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-## form_story_2
-* request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "气血不通"}
-    - form: diagnosis_form
-    - slot{"symptom": "气血不通"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "益安宁丸"}
-    - form: diagnosis_form
-    - slot{"drug": "益安宁丸"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "过敏性皮炎"}
-    - form: diagnosis_form
-    - slot{"disease": "过敏性皮炎"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-    
-## form_story_3
-* request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "甲状腺肿大"}
-    - form: diagnosis_form
-    - slot{"symptom": "甲状腺肿大"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "丹鳖胶囊"}
-    - form: diagnosis_form
-    - slot{"drug": "丹鳖胶囊"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "气管肿瘤"}
-    - form: diagnosis_form
-    - slot{"disease": "气管肿瘤"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-    
-## form_story_4
-* request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "补肾强身片"}
-    - form: diagnosis_form
-    - slot{"drug": "补肾强身片"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "尿痛"}
-    - form: diagnosis_form
-    - slot{"symptom": "尿痛"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "高血压"}
-    - form: diagnosis_form
-    - slot{"disease": "高血压"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-## form_story_5
-* request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "四环素片"}
-    - form: diagnosis_form
-    - slot{"drug": "四环素片"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "下腹绞痛"}
-    - form: diagnosis_form
-    - slot{"symptom": "下腹绞痛"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "胆石症"}
-    - form: diagnosis_form
-    - slot{"disease": "胆石症"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-## form_story_6
-* request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "肝硬化"}
-    - form: diagnosis_form
-    - slot{"disease": "肝硬化"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "金刚片"}
-    - form: diagnosis_form
-    - slot{"drug": "金刚片"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "排尿不畅"}
-    - form: diagnosis_form
-    - slot{"symptom": "排尿不畅"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-## form_story_6
-* request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "胃癌"}
-    - form: diagnosis_form
-    - slot{"disease": "胃癌"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "济泰片"}
-    - form: diagnosis_form
-    - slot{"drug": "济泰片"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "小腹刺痛"}
-    - form: diagnosis_form
-    - slot{"symptom": "小腹刺痛"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-
+   - diagnosis_form
+   - form{"name":"diagnosis_form"}
+   - slot{"request_slot":"symptom"}
+* form: inform{"symptom":"肺外症状"}
+   - form:diagnosis_form
+   - slot{"symptom":"肺外症状"}
+   - slot{"request_slot":"drug"}
+* form: inform{"drug":"司帕沙星片"}
+   - form: diagnosis_form
+   - slot{"drug":"司帕沙星片"}
+   - slot{"request_slot":"disease"}
+* diagnosis_form{"disease":"大叶性肺炎"}
+   - form{"name":"diagnosis_form"}
+   - slot{"disease":"大叶性肺炎"}
+   - form:{"name":null}
+   - slot{"requested_slot":null}
+* bye
+   - utter_goodbye
+   
 ## form_story_1
 * request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "肺外症状"}
-    - form: diagnosis_form
-    - slot{"symptom": "肺外症状"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "司帕沙星片"}
-    - form: diagnosis_form
-    - slot{"drug": "司帕沙星片"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "大叶性肺炎"}
-    - form: diagnosis_form
-    - slot{"disease": "大叶性肺炎"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-## form_story_2
+   - diagnosis_form
+   - form{"name":"diagnosis_form"}
+   - slot{"request_slot":"symptom"}
+* form: inform{"symptom":"劳累后遗精"}
+   - form:diagnosis_form
+   - slot{"symptom":"劳累后遗精"}
+   - slot{"request_slot":"drug"}
+* form: inform{"drug":"加味逍遥丸"}
+   - form: diagnosis_form
+   - slot{"drug":"加味逍遥丸"}
+   - slot{"request_slot":"disease"}
+* diagnosis_form{"disease":"肺念珠菌病"}
+   - form{"name":"diagnosis_form"}
+   - slot{"disease":"肺念珠菌病"}
+   - form:{"name":null}
+   - slot{"requested_slot":null}
+* bye
+   - utter_goodbye
+  
+## form_story_1
 * request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "气血不通"}
-    - form: diagnosis_form
-    - slot{"symptom": "气血不通"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "益安宁丸"}
-    - form: diagnosis_form
-    - slot{"drug": "益安宁丸"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "过敏性皮炎"}
-    - form: diagnosis_form
-    - slot{"disease": "过敏性皮炎"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-    
-## form_story_3
-* request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "甲状腺肿大"}
-    - form: diagnosis_form
-    - slot{"symptom": "甲状腺肿大"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "丹鳖胶囊"}
-    - form: diagnosis_form
-    - slot{"drug": "丹鳖胶囊"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "气管肿瘤"}
-    - form: diagnosis_form
-    - slot{"disease": "气管肿瘤"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-    
-## form_story_4
-* request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "补肾强身片"}
-    - form: diagnosis_form
-    - slot{"drug": "补肾强身片"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "尿痛"}
-    - form: diagnosis_form
-    - slot{"symptom": "尿痛"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "高血压"}
-    - form: diagnosis_form
-    - slot{"disease": "高血压"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-## form_story_5
-* request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "四环素片"}
-    - form: diagnosis_form
-    - slot{"drug": "四环素片"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "下腹绞痛"}
-    - form: diagnosis_form
-    - slot{"symptom": "下腹绞痛"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "胆石症"}
-    - form: diagnosis_form
-    - slot{"disease": "胆石症"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
-## form_story_6
-* request_professor_diagnosis
-    - diagnosis_form
-    - form{"name": "diagnosis_form"}
-    - utter_ask_disease
-    - slot{"requested_slot": "disease"}
-* form: inform{"disease": "肝硬化"}
-    - form: diagnosis_form
-    - slot{"disease": "肝硬化"}
-    - utter_ask_drug
-    - slot{"requested_slot": "drug"}
-* form: inform{"drug": "金刚片"}
-    - form: diagnosis_form
-    - slot{"drug": "金刚片"}
-    - utter_ask_symptom
-    - slot{"requested_slot": "symptom"}
-* form: inform{"symptom": "排尿不畅"}
-    - form: diagnosis_form
-    - slot{"symptom": "排尿不畅"}
-    - form: diagnosis_form
-* thanks
-    - utter_answer_thanks
-    
+   - diagnosis_form
+   - form{"name":"diagnosis_form"}
+   - slot{"request_slot":"symptom"}
+* form: inform{"symptom":"足跟痛"}
+   - form:diagnosis_form
+   - slot{"symptom":"足跟痛"}
+   - slot{"request_slot":"drug"}
+* form: inform{"drug":"达沙替尼片"}
+   - form: diagnosis_form
+   - slot{"drug":"达沙替尼片"}
+   - slot{"request_slot":"disease"}
+* diagnosis_form{"disease":"鼾症"}
+   - form{"name":"diagnosis_form"}
+   - slot{"disease":"鼾症"}
+   - form:{"name":null}
+   - slot{"requested_slot":null}
+* bye
+   - utter_goodbye

@@ -1,7 +1,7 @@
 language: "zh"
 
 policies:
-  - name: "rasa.core.policies.keras_policy.KerasPolicy"
+  - name: "KerasPolicy"
     epochs: 120
     featurizer:
       - name: MaxHistoryTrackerFeaturizer

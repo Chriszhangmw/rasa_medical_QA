@@ -85,7 +85,6 @@ actions:
 - utter_first
 - utter_donknow
 - action_first
-- action_donknow
 - action_echo
 - action_search_treat
 - action_search_food

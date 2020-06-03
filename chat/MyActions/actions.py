@@ -50,7 +50,8 @@ class ActionFirst(Action):
             domain: Dict[Text, Any]):
         dispatcher.utter_template("utter_first", tracker)
         # dispatcher.utter_template("utter_howcanhelp", tracker)
-        dispatcher.utter_message(md("您可以这样向我提问: <br/>头痛怎么办<br/>\
+        dispatcher.utter_message(md("您可以这样向我提问: "
+                                    "<br/>头痛怎么办<br/>\
                               什么人容易头痛<br/>\
                               头痛吃什么药<br/>\
                               头痛能治吗<br/>\
@@ -431,8 +432,16 @@ class ActionSearchDiseaseDept(Action):
 
 from rasa_sdk.forms import FormAction
 from typing import Dict, Text, Any, List, Union
+from rasa_sdk.events import SlotSet
 
 def get_diagnosis(disease,drug,symptom):
+    if isinstance(disease,list):
+        disease = ' '.join(disease)
+    if isinstance(drug,list):
+        drug = ' '.join(drug)
+    if isinstance(symptom,list):
+        symptom = ' '.join(symptom)
+
     return '根据您目前的输入信息情况，系统诊断建议为：' + '阑尾' + '炎'
 
 
@@ -453,10 +462,20 @@ class DiagnosisForm(FormAction):
 
         diagnosis = get_diagnosis(disease,drug,symptom)
         dispatcher.utter_message(diagnosis)
-        tracker._reset_slots()
 
 
-        return []
+
+        return [SlotSet("drug",None),SlotSet("disease",None),SlotSet("symptom",None)]
+
+    def entity_is_desired(self,
+                          requested_slot_mapping: Dict[Text, Any],
+                          slot: Text,
+                          tracker: "Tracker") -> bool:
+        slot_equals_entity = slot == requested_slot_mapping.get("entity")
+        return slot_equals_entity
+
+
+
 
 
 
