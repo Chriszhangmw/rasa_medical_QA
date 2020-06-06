@@ -463,8 +463,6 @@ class DiagnosisForm(FormAction):
         diagnosis = get_diagnosis(disease,drug,symptom)
         dispatcher.utter_message(diagnosis)
 
-
-
         return [SlotSet("drug",None),SlotSet("disease",None),SlotSet("symptom",None)]
 
     def entity_is_desired(self,
