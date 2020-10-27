@@ -25,7 +25,7 @@ coloredlogs==10.0
 colorhash==1.0.2
 ConfigArgParse==0.14.0
 constantly==15.1.0
-cryptography==2.7
+cryptography==3.2
 cssselect==1.0.3
 cycler==0.10.0
 decorator==4.4.0
