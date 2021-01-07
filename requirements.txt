@@ -59,7 +59,7 @@ kafka-python==1.4.6
 Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.0
 kiwisolver==1.1.0
-lxml==4.3.4
+lxml==4.6.2
 Mako==1.0.14
 Markdown==3.1.1
 markdownify==0.4.1
