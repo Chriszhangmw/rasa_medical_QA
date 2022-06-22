@@ -76,7 +76,7 @@ multidict==4.5.2
 neobolt==1.7.13
 neotime==1.7.4
 networkx==2.3
-numpy==1.17.0
+numpy==1.22.0
 packaging==19.0
 parsel==1.5.1
 pika==1.0.1
